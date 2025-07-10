@@ -19,8 +19,8 @@ class ES_{{ cookiecutter.project_slug }}( ES_document ):
             'keyword': field.Text( multi=True )
         }, )
     url = field.keyword()
-    create_at = field.Date
-    update_at = field.date
+    create_at = field.Date()
+    update_at = field.Date()
 
     class Index:
         name = build_index_name( '{{ cookiecutter.project_slug }}' )
