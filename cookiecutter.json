@@ -1,4 +1,5 @@
 {
   "project_name": "application name",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}"
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "django_project": "django parent project"
 }
