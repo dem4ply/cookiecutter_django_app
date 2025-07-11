@@ -16,7 +16,7 @@ def debug_task( self, *args, **kw ):
 
 
 @celery_task.task(
-    bind=True, base=Task_base, ignore_results=True, max_retries=3,
+    bind=True, base=Task_base, ignore_result=True, max_retries=3,
     rate_limit='30/m' )
 def example_task( self, *args, **kw ):
     logger.info(
