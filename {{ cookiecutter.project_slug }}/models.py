@@ -1,7 +1,7 @@
 from django.db import models
 from chibi_django.models import Chibi_model, ES_document
 from django.utils.translation import gettext_lazy as _
-from elasticsearcch_dsl import field
+from elasticsearch_dsl import field
 
 
 class {{ cookiecutter.project_slug }}( Chibi_model ):
