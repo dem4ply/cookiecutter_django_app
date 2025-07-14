@@ -5,7 +5,7 @@ from {{ cookiecutter.django_project }}.tasks_class import Task_base
 from {{ cookiecutter.django_project }}.app_celery import {{ cookiecutter.django_project }}_task as celery_task
 
 
-logger = get_task_logger( '{{ cookiecutter.project_slug }}.task.danbooru' )
+logger = get_task_logger( '{{ cookiecutter.project_slug }}.task' )
 
 
 @celery_task.task( bind=True, base=Task_base, ignore_result=True )
