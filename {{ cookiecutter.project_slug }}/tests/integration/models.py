@@ -8,6 +8,12 @@ from {{ cookiecutter.project_slug }}.models import (
 )
 
 
+class Test_migration( APITestCase ):
+    def test_index_should_exists( self ):
+        index_exists = ES_{{ cookiecutter.project_slug }}.index.exists()
+        self.assertTrue( index_exists )
+
+
 class Test_model( VCRTestCase, APITestCase ):
     def _get_vcr_kwargs( self, **kw ):
         kw[ 'ignore_hosts' ] = [ 'localhost', 'waifus' ]
